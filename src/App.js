@@ -8,7 +8,7 @@ const MovieGrid = lazy(() => import("./components/MovieGrid"))
 const MovieModal = lazy(() => import("./components/MovieModal"))
 
 // TMDB API configuration
-const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY || "6180b43c5ce6462ef3d03a619cfcd54e"
+const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY
 const BASE_URL = "https://api.themoviedb.org/3"
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
 
