@@ -38,7 +38,9 @@ export default function MovieDiscoveryApp() {
   // Fetch movies from TMDB API
   const fetchMovies = async (endpoint) => {
     try {
-      const response = await fetch(`${BASE_URL}${endpoint}?api_key=${API_KEY}`)
+      const hasQuery = endpoint.includes('?')
+      const url = `${BASE_URL}${endpoint}${hasQuery ? '&' : '?'}api_key=${API_KEY}`
+      const response = await fetch(url)
       const data = await response.json()
       return data.results || []
     } catch (error) {
